@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6K2-Y6-8ch">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FavoriteVC-->
+        <scene sceneID="Aau-mO-HGo">
+            <objects>
+                <viewController id="6K2-Y6-8ch" customClass="FavoriteVC" customModule="Game_Catalogue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nPt-lS-xAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="idB-wc-jj9"/>
+                    </view>
+                    <connections>
+                        <segue destination="eLm-cY-lCb" kind="custom" identifier="mx_page_0" customClass="MXPageSegue" id="i4g-0D-Jkg"/>
+                        <segue destination="UYY-pN-fe8" kind="custom" identifier="mx_page_1" customClass="MXPageSegue" id="WaV-9H-YBo"/>
+                        <segue destination="UFW-xB-oLm" kind="custom" identifier="mx_page_2" customClass="MXPageSegue" id="RxW-8W-pFN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecz-ah-mVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="93"/>
+        </scene>
+        <!--Favorite DeveloperVC-->
+        <scene sceneID="T0O-ZC-paq">
+            <objects>
+                <viewController id="UYY-pN-fe8" customClass="FavoriteDeveloperVC" customModule="Game_Catalogue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="54e-0s-Wmj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-FS-mZN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="54e-0s-Wmj" id="g3c-7G-xs3"/>
+                                    <outlet property="delegate" destination="54e-0s-Wmj" id="Z6c-XD-b99"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HxV-tG-QOj" firstAttribute="trailing" secondItem="AWa-FS-mZN" secondAttribute="trailing" id="Db5-37-xvC"/>
+                            <constraint firstItem="HxV-tG-QOj" firstAttribute="bottom" secondItem="AWa-FS-mZN" secondAttribute="bottom" id="GrE-oi-eR4"/>
+                            <constraint firstItem="AWa-FS-mZN" firstAttribute="top" secondItem="HxV-tG-QOj" secondAttribute="top" id="KHk-3G-gyV"/>
+                            <constraint firstItem="AWa-FS-mZN" firstAttribute="leading" secondItem="HxV-tG-QOj" secondAttribute="leading" id="f5I-yl-BkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HxV-tG-QOj"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableFavDeveloper" destination="AWa-FS-mZN" id="rPm-LW-FUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5o-VN-D6v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="92"/>
+        </scene>
+        <!--Favorite CreatorVC-->
+        <scene sceneID="dWu-Qb-kGg">
+            <objects>
+                <viewController id="UFW-xB-oLm" customClass="FavoriteCreatorVC" customModule="Game_Catalogue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Pu-4a-3fh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VGL-oD-nt1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Pu-4a-3fh" id="xYp-Ci-0U3"/>
+                                    <outlet property="delegate" destination="5Pu-4a-3fh" id="rIJ-lb-ytM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nbN-qR-bfq" firstAttribute="trailing" secondItem="VGL-oD-nt1" secondAttribute="trailing" id="VkM-vb-c7h"/>
+                            <constraint firstItem="nbN-qR-bfq" firstAttribute="bottom" secondItem="VGL-oD-nt1" secondAttribute="bottom" id="Wek-4p-e9F"/>
+                            <constraint firstItem="VGL-oD-nt1" firstAttribute="top" secondItem="nbN-qR-bfq" secondAttribute="top" id="u7N-P6-Vgm"/>
+                            <constraint firstItem="VGL-oD-nt1" firstAttribute="leading" secondItem="nbN-qR-bfq" secondAttribute="leading" id="uZ7-LF-y5g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nbN-qR-bfq"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableviewCreators" destination="VGL-oD-nt1" id="MqX-bb-v2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8D-3W-OcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="602"/>
+        </scene>
+        <!--Favorite GameVC-->
+        <scene sceneID="43v-Ha-b00">
+            <objects>
+                <viewController id="eLm-cY-lCb" customClass="FavoriteGameVC" customModule="Game_Catalogue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2K-71-Lyx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="haN-sG-BOb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="D2K-71-Lyx" id="GVu-eR-inp"/>
+                                    <outlet property="delegate" destination="D2K-71-Lyx" id="iFA-nP-jpg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="haN-sG-BOb" firstAttribute="leading" secondItem="YTZ-YP-ypT" secondAttribute="leading" id="4qL-CF-K7a"/>
+                            <constraint firstItem="YTZ-YP-ypT" firstAttribute="bottom" secondItem="haN-sG-BOb" secondAttribute="bottom" id="Lvr-hP-Vec"/>
+                            <constraint firstItem="YTZ-YP-ypT" firstAttribute="trailing" secondItem="haN-sG-BOb" secondAttribute="trailing" id="NAe-tP-n6q"/>
+                            <constraint firstItem="haN-sG-BOb" firstAttribute="top" secondItem="YTZ-YP-ypT" secondAttribute="top" id="TYh-Kd-y6A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YTZ-YP-ypT"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableviewGames" destination="haN-sG-BOb" id="mLg-a2-3aS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddn-ma-O6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="-529"/>
+        </scene>
+    </scenes>
+</document>

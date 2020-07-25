@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="115" id="YEm-ci-QD7" customClass="CreatorCell" customModule="Game_Catalogue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YEm-ci-QD7" id="YkD-sX-X2J">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-sN-tCa">
+                        <rect key="frame" x="12" y="12" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="6N3-kh-gbE"/>
+                            <constraint firstAttribute="height" constant="80" id="U0c-ab-2xa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-mn-GZe">
+                        <rect key="frame" x="108" y="16" width="259" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-l9-C7q">
+                        <rect key="frame" x="108" y="57" width="259" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zt9-sN-tCa" secondAttribute="bottom" constant="12" id="5mb-Dy-Q6m"/>
+                    <constraint firstAttribute="trailing" secondItem="Lf8-l9-C7q" secondAttribute="trailing" constant="16" id="AaZ-Xj-kjJ"/>
+                    <constraint firstItem="Lf8-l9-C7q" firstAttribute="leading" secondItem="zt9-sN-tCa" secondAttribute="trailing" constant="16" id="b5U-sA-Q0u"/>
+                    <constraint firstItem="f3H-mn-GZe" firstAttribute="top" secondItem="YkD-sX-X2J" secondAttribute="top" constant="16" id="eYz-im-lFA"/>
+                    <constraint firstItem="zt9-sN-tCa" firstAttribute="leading" secondItem="YkD-sX-X2J" secondAttribute="leading" constant="12" id="h3s-cE-guG"/>
+                    <constraint firstAttribute="trailing" secondItem="f3H-mn-GZe" secondAttribute="trailing" constant="16" id="oMm-4G-AfC"/>
+                    <constraint firstItem="f3H-mn-GZe" firstAttribute="leading" secondItem="zt9-sN-tCa" secondAttribute="trailing" constant="16" id="psX-Tl-bgo"/>
+                    <constraint firstItem="Lf8-l9-C7q" firstAttribute="top" secondItem="f3H-mn-GZe" secondAttribute="bottom" constant="20" id="uSy-P3-bde"/>
+                    <constraint firstItem="zt9-sN-tCa" firstAttribute="top" secondItem="YkD-sX-X2J" secondAttribute="top" constant="12" id="yam-Rh-fiH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="LabelGamesCount" destination="Lf8-l9-C7q" id="qQ4-Qq-lQs"/>
+                <outlet property="imageCreators" destination="zt9-sN-tCa" id="CbU-nr-XLj"/>
+                <outlet property="labelName" destination="f3H-mn-GZe" id="MkE-xk-4WP"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="107.47767857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

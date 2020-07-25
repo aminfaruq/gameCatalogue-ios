@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8V-95-J1q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="4py-KV-sL2">
+            <objects>
+                <viewController id="q02-7x-MQm" customClass="SearchVC" customModule="Game_Catalogue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhq-fo-pP2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Game" translatesAutoresizingMaskIntoConstraints="NO" id="WZG-pj-LR9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-gT-i3a">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nhq-fo-pP2" id="t7d-pe-jbZ"/>
+                                    <outlet property="delegate" destination="nhq-fo-pP2" id="Qnc-2G-mlJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WZG-pj-LR9" firstAttribute="top" secondItem="Xvo-pd-qNb" secondAttribute="top" id="1lz-sP-Jol"/>
+                            <constraint firstItem="qk2-gT-i3a" firstAttribute="leading" secondItem="Xvo-pd-qNb" secondAttribute="leading" id="1pl-Jz-RTp"/>
+                            <constraint firstItem="qk2-gT-i3a" firstAttribute="top" secondItem="WZG-pj-LR9" secondAttribute="bottom" id="HYd-qt-n1c"/>
+                            <constraint firstItem="qk2-gT-i3a" firstAttribute="trailing" secondItem="Xvo-pd-qNb" secondAttribute="trailing" id="XA3-BO-1j1"/>
+                            <constraint firstItem="WZG-pj-LR9" firstAttribute="leading" secondItem="Xvo-pd-qNb" secondAttribute="leading" id="nmG-dD-OrS"/>
+                            <constraint firstItem="WZG-pj-LR9" firstAttribute="trailing" secondItem="Xvo-pd-qNb" secondAttribute="trailing" id="yX5-5D-Zmw"/>
+                            <constraint firstItem="qk2-gT-i3a" firstAttribute="bottom" secondItem="Xvo-pd-qNb" secondAttribute="bottom" id="zK5-5W-jF0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xvo-pd-qNb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N9y-ER-caU"/>
+                    <connections>
+                        <outlet property="searchBar" destination="WZG-pj-LR9" id="WGO-Bc-6mc"/>
+                        <outlet property="tableviewGame" destination="qk2-gT-i3a" id="GcM-YN-McD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpc-A0-r8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="67.633928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wpK-Yf-F2D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b8V-95-J1q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VpJ-Bq-sHB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q02-7x-MQm" kind="relationship" relationship="rootViewController" id="egF-rc-XDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8r-5s-XEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+</document>

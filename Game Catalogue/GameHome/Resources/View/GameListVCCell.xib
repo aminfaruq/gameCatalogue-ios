@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qib-H7-ayt" customClass="GameListVCCell" customModule="Game_Catalogue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H3s-Ai-Zlx">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DoN-V0-vUI">
+                        <rect key="frame" x="2" y="0.0" width="149" height="158"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="149" id="RZe-3K-c7p"/>
+                            <constraint firstAttribute="height" constant="158" id="ae6-eP-QmA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9g-s8-Vxb">
+                        <rect key="frame" x="2" y="163" width="149" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2013 - 09 -17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR8-VM-S8u">
+                        <rect key="frame" x="2" y="182.5" width="54.5" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-Os-zGQ">
+                        <rect key="frame" x="98" y="182" width="53" height="10"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z9Z-kQ-Ogu">
+                                <rect key="frame" x="0.0" y="0.0" width="22" height="10"/>
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIm-Kv-8gg">
+                                <rect key="frame" x="22" y="0.0" width="31" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="cI5-SM-Oma"/>
+                            <constraint firstItem="FIm-Kv-8gg" firstAttribute="width" secondItem="z9Z-kQ-Ogu" secondAttribute="width" multiplier="1.40909" id="kWH-DO-mgO"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iRa-Os-zGQ" secondAttribute="trailing" constant="2" id="8nl-pd-ytT"/>
+                    <constraint firstAttribute="trailing" secondItem="DoN-V0-vUI" secondAttribute="trailing" constant="2" id="GVi-Gj-3yw"/>
+                    <constraint firstItem="b9g-s8-Vxb" firstAttribute="leading" secondItem="H3s-Ai-Zlx" secondAttribute="leading" constant="2" id="UJn-6t-LIg"/>
+                    <constraint firstItem="b9g-s8-Vxb" firstAttribute="top" secondItem="DoN-V0-vUI" secondAttribute="bottom" constant="5" id="aLw-yA-ZYB"/>
+                    <constraint firstItem="DoN-V0-vUI" firstAttribute="leading" secondItem="H3s-Ai-Zlx" secondAttribute="leading" constant="2" id="aal-DE-shC"/>
+                    <constraint firstAttribute="trailing" secondItem="b9g-s8-Vxb" secondAttribute="trailing" constant="2" id="aeH-Wb-jeg"/>
+                    <constraint firstItem="LR8-VM-S8u" firstAttribute="width" secondItem="iRa-Os-zGQ" secondAttribute="width" multiplier="1.0283" id="nfg-K5-JNc"/>
+                    <constraint firstItem="iRa-Os-zGQ" firstAttribute="top" secondItem="b9g-s8-Vxb" secondAttribute="bottom" constant="4.5" id="oLm-5k-u6Q"/>
+                    <constraint firstItem="LR8-VM-S8u" firstAttribute="leading" secondItem="H3s-Ai-Zlx" secondAttribute="leading" constant="2" id="vrV-MY-q0A"/>
+                    <constraint firstItem="LR8-VM-S8u" firstAttribute="top" secondItem="b9g-s8-Vxb" secondAttribute="bottom" constant="5" id="wOL-q6-cmj"/>
+                    <constraint firstItem="DoN-V0-vUI" firstAttribute="top" secondItem="H3s-Ai-Zlx" secondAttribute="top" id="yN1-XU-RK5"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="imageListVC" destination="DoN-V0-vUI" id="exv-9r-jkF"/>
+                <outlet property="labelDate" destination="LR8-VM-S8u" id="6E3-eS-hnK"/>
+                <outlet property="labelName" destination="b9g-s8-Vxb" id="wMv-xF-Wbn"/>
+                <outlet property="labelRating" destination="FIm-Kv-8gg" id="0da-cl-r89"/>
+            </connections>
+            <point key="canvasLocation" x="16.666666666666668" y="27.455357142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
